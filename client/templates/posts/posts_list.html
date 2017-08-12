@@ -1,0 +1,8 @@
+<template name="postsList">
+  <div class="posts">
+    <!-- posts: es un ayudante de plantilla, es una variable -->
+    {{#each posts}}
+      {{>postItem}}
+    {{/each}}
+  </div>
+</template>

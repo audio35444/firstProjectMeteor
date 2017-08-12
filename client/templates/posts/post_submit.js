@@ -5,10 +5,13 @@ Template.postSubmit.events({
       url:$(e.target).find('[name=url]').val(),
       title:$(e.target).find('[name=title]').val()
     };
+    var flag ='true';
     Meteor.call('postInsert',post,function(error,result){
-      if(error)return alert(error.reason);
-      if(result.postExists)alert('This link has already been posted');
-      Router.go('postPage',{_id:result._id},{query:'insertSuccess=true'});
+      if(error)return throwError(error.reason);
+      if(result.postExists){
+        flag ='false';
+        throwError('This link has already been posted')};
+      Router.go('postPage',{_id:result._id},{query:'insertSuccess='+flag});
     });
 
     //para probar la COMPENSACION DE LATENCIA

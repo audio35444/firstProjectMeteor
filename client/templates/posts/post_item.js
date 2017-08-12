@@ -10,6 +10,6 @@ Template.postItem.helpers({
   },
   insertSuccess:function(){
     console.log(this.insertSuccess);
-    return (this.insertSuccess != null);
+    return (this.insertSuccess != null && this.insertSuccess === 'true');
   }
 });

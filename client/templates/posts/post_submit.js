@@ -23,10 +23,10 @@ Template.postSubmit.events({
     if (errors.title || errors.url)return Session.set('postSubmitErrors',errors);
     var flag ='true';
     Meteor.call('postInsert',post,function(error,result){
-      if(error)return throwError(error.reason);
+      if(error)return Errors.throw(error.reason);
       if(result.postExists){
         flag ='false';
-        throwError('This link has already been posted')};
+        Errors.throw('This link has already been posted')};
       Router.go('postPage',{_id:result._id},{query:'insertSuccess='+flag});
     });
 

@@ -23,8 +23,8 @@ Template.postEdit.events({
     if (errors.title || errors.url)
       return Session.set('postEditErrors', errors);
     Meteor.call('postUpdate',currentPostId,postProperties,function(error,result){
-      if(error)return throwErrort(error.reason);
-      if(result.postExists)throwError('This link has already been posted');
+      if(error)return Errors.throw(error.reason);
+      if(result.postExists)Errors.throw('This link has already been posted');
       else Router.go('postPage',{_id:result._id});
     });
     // Posts.update(currentPostId,{$set:postProperties},function(err){

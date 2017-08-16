@@ -1,13 +1,14 @@
-<template name="errors">
+<template name="meteorErrors">
   <div class="errors">
     {{#each errors}}
-      {{>error}}
+      {{>meteorError}}
     {{/each}}
   </div>
 </template>
 
-<template name="error">
-  <div class="alert-danger alert">
+
+<template name="meteorError">
+  <div class="alert alert-danger">
     <button class="close" type="button" data-dismiss="alert">&times;</button>
     {{message}}
   </div>

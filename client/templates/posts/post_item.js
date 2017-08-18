@@ -11,8 +11,5 @@ Template.postItem.helpers({
   insertSuccess:function(){
     console.log(this.insertSuccess);
     return (this.insertSuccess != null && this.insertSuccess === 'true');
-  },
-  commentsCount:function(){
-    return Comments.find({postId:this._id}).count();
   }
 });

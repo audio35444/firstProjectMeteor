@@ -92,15 +92,18 @@ color: #bbb;
 white-space: nowrap; }
 .load-more {
 display: block;
+font-weight: bold;
 border-radius: 3px;
-background: rgba(0, 0, 0, 0.05);
+color:rgb(67, 71, 69);
+background:rgba(29, 55, 71, 0.09);
 text-align: center;
 height: 60px;
 line-height: 60px;
 margin-bottom: 10px; }
 .load-more:hover {
 text-decoration: none;
-background: rgba(0, 0, 0, 0.1); }
+color: rgb(247, 249, 251);
+background: rgba(29, 55, 71, 0.7); }
 .posts .spinner-container{
 position: relative;
 height: 100px;
@@ -143,4 +146,9 @@ float: right;
 clear: both;
 margin-bottom: 5px;
 pointer-events: auto;
+}
+.googlestyle{
+  font-family: 'Tangerine', serif;
+  font-size: 98px;
+  text-shadow: 4px 4px 4px #aaa;
 }

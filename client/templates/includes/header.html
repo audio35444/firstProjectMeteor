@@ -1,6 +1,15 @@
 <template name="header">
   <br/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=vintage">
+  <div class="container">
+      <div class="">
+        <h1>  <a href="{{pathFor 'postsList'}}" class="font-effect-vintage googlestyle">Mieles de Monte</a></h1>
+
+      </div>
+    </div>
   <nav class="navbar navbar-inverse" role="navigation">
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -8,10 +17,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="{{pathFor 'postsList'}}" class="navbar-brand">CeriSabor</a>
+
       </div>
       <div id="navigation" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav ">
           {{#if currentUser}}
           <li>
             <a href="{{pathFor 'postSubmit'}}" >Add Post <span class="glyphicon glyphicon-plus"></span></a>
